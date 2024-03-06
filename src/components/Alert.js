@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Alert = () => {
-   alert("Alerted");
+   
   return (
     <div>
-
+       <div><h1><center>Alert Enabled</center></h1></div>
     </div>
   )
 }
