@@ -1,16 +1,14 @@
-import React from 'react';
-import Uppercase from './components/Uppercase'
-import Navbar from './components/Navbar'
-import Dropbox from './components/Dropbox'
-import End from './components/End';
-
+import React,{useState} from 'react';
+import Alert from './components/Alert';
 const App = () => {
+  const [alert,setAlert] = useState(false);
+  const submitHandler = (e) => {
+     setAlert(true);
+  }
   return (
     <div>
-      <Navbar />
-       <Uppercase />
-      <Dropbox/>
-      <End/>
+        <button onClick={submitHandler}>Get Alert</button>
+        {alert ? <Alert /> : "Get Alert by clicking button"}
     </div>
   )
 }
